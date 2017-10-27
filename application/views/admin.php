@@ -12,8 +12,8 @@
     <title>Admin panel</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php eco base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?php eco base_url()?>assets/css/style.css">
+    <link href="<?php echo base_url('asserts/css/bootstrap.min.css');?>" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="<?php echo base_url('asserts/css/style.css');?>">
     <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
   </head>
 
@@ -36,11 +36,10 @@
             <li><a href="#pages">Pages</a></li>
             <li><a href="#posts">Posts</a></li>
             <li><a href="#suppliers">Suppliers</a></li>
-            <li><a href="#">View messages</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome,Kavinda</a></li>
-            <li><a href="#login">Logout</a></li>
+            <li><a  href="<?php echo site_url('home/logout')?>">Logout</a></li>
             
           </ul>
         </div><!--/.nav-collapse -->
@@ -87,10 +86,10 @@
               <a href="#" class="list-group-item active main-color-bg">
                 Dashboard
               </a>
-              <a href="#pages" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages<span class="badge">12</span></a>
+              <a href="<?php echo base_url('application/views/pages.php');?>" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages<span class="badge">12</span></a>
               <a href="#posts" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts<span class="badge">56</span></a>
-              <a href="#suppliers" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Suppliers<span class="badge">101</span></a><a href="#suppliers" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Suppliers<span class="badge">101</span></a>
-              <a href="#suppliers" class="list-group-item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Messages<span class="badge">54</span></a>
+              <a href="#suppliers" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Suppliers<span class="badge">101</span></a>
+              
           </div>
           </div>
           <div class="col-md-9">
@@ -170,8 +169,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?php eco base_url()?>assets/js/jquery.min.js"></script>
-    <script src="<?php eco base_url()?>assets/js/bootstrap.min.js"></script>
+   <script src="<?php echo base_url('asserts/js/jquery.min.js');?>"></script>
+    <script src="<?php echo base_url('asserts/js/bootstrap.min.js');?>"></script>
+    
     
   </body>
 </html>
