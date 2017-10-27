@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => 'uoclbspdbinstance.c5cec24wzera.us-east-1.rds.amazonaws.com',
+	'username' => 'uocroot',
+	'password' => 'uocrootpass',
+	'database' => 'samikta_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
