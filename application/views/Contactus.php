@@ -52,7 +52,7 @@
                    ?>
 
                   <?php echo validation_errors() ?>
-                  <?php echo form_open('Contact/Contactus/inputContactusData'); ?>
+                  <?php echo form_open('Contactus/inputContactusData'); ?>
 
                         <div class="messages"></div>
 
