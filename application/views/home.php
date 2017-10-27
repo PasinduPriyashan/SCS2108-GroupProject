@@ -12,10 +12,10 @@
     <title>Samikta Constructions</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php eco base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?php eco base_url()?>assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="<?php eco base_url()?>assets/css/homestyle.css">
-    <script src="https://cdn.ckeditor.com/4.7.3/sta<?php eco base_url()?>assets/ndard/ckeditor.js"></script>
+    <link href="<?php echo base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/homestyle.css">
+    <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
   </head>
 
   <body>
@@ -40,7 +40,7 @@
         <div id="navbar" class="collapse navbar-collapse">
            <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="<?php echo base_url()?>application/views/pages.php">Our Company</a></li>
+            <li><a href="">Our Company</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Contact Us</a></li>
@@ -57,7 +57,15 @@
 
     
       
-    
+    <div class="container">
+      <div class=row>
+        <div class="">
+          
+        </div>
+        
+      </div>
+      
+    </div>
     
 
 
@@ -74,8 +82,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?php eco base_url()?>assets/js/jquery.min.js"></script>
-    <script src="<?php eco base_url()?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/jquery.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
     
   </body>
 </html>
