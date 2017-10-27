@@ -43,7 +43,7 @@
             <li><a href="">Our Company</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Projects</a></li>
-            <li><a href="contactus">Contact Us</a></li>
+            <li><a href="Application/controllers/Contactus">Contact Us</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Supplier Registration</a></li>
