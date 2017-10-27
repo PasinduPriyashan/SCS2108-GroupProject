@@ -47,7 +47,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Supplier Registration</a></li>
-            <li><a href="#login">Login</a></li>
+            <li><a href="<?php echo site_url('login/user_login')?> ">Login</a></li>
             
           </ul>
            
