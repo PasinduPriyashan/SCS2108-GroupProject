@@ -13,8 +13,8 @@
     <title>View messages</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url()?>assest/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assest/css/style.css">
+    <link href="<?php echo base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css">
     <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
   </head>
 
