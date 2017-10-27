@@ -12,9 +12,9 @@
     <title>Samikta Constructions</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/homestyle.css">
+    <link href="<?php echo base_url('asserts/css/bootstrap.min.css');?>" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('asserts/css/style.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('asserts/css/homestyle.css');?>">
     <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
   </head>
 
@@ -40,14 +40,14 @@
         <div id="navbar" class="collapse navbar-collapse">
            <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="">Our Company</a></li>
+            <li><a href="<?php echo base_url()?>application/views/pages.php">Our Company</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Projects</a></li>
-            <li><a href="Application/controllers/Contactus">Contact Us</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Supplier Registration</a></li>
-            <li><a href="#login">Login</a></li>
+           
+            <a href="<?php echo site_url('login/user_login')?> " class="btn btn-link">Sign Up</a>
             
           </ul>
            
@@ -57,15 +57,7 @@
 
     
       
-    <div class="container">
-      <div class=row>
-        <div class="">
-          
-        </div>
-        
-      </div>
-      
-    </div>
+    
     
 
 
@@ -82,8 +74,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?php echo base_url()?>assets/js/jquery.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
+   <script src="<?php echo base_url('asserts/js/jquery.min.js');?>"></script>
+    <script src="<?php echo base_url('asserts/js/bootstrap.min.js');?>"></script>
+    
     
   </body>
 </html>
