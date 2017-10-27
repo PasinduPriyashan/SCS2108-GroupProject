@@ -43,11 +43,11 @@
             <li><a href="">Our Company</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="<?php echo site_url('contactus')?> ">Contact Us</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Supplier Registration</a></li>
-            <li><a href="#login">Login</a></li>
+            <li><a href="<?php echo site_url('login/user_login')?> ">Login</a></li>
             
           </ul>
            
