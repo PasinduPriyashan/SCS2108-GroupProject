@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<?php $log = $this->session->userdata('loggedin');
+<?php $log = $this->session->userdata('loggedIn');
 if (!($log)) {
   redirect('Home/login');
 }

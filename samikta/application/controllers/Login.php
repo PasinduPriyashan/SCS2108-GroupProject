@@ -4,7 +4,7 @@ class Login extends CI_controller
 {
 
   public function loginUser(){
-    
+
   	//set validation rules
     $this->form_validation->set_rules('username', 'Username', 'required');
 	$this->form_validation->set_rules('password', 'Password', 'required');
@@ -15,21 +15,21 @@ class Login extends CI_controller
 
 	}else{
 
-		$this->load->model('user');
-		$result = $this->user->checkLogin();
+		$this->load->model('User');
+		$result = $this->User->checkLogin();
 
 		if($result != false){
 
 			$userData = array(
 				'userID'=>$result->userID,
 				'userName'=>$result->userName,
-				'userType'=>$result->userType,	
+				'userType'=>$result->userType,
 				'loggedIn'=>TRUE
 			);
 			$this->session->set_userdata($userData);
 			$this->session->set_flashdata('welcome','welcome back');
 			redirect('Admin');
-			
+
 
 
 		}else{
