@@ -64,7 +64,7 @@ if (!($log)) {
                         </a>
                     </li>
                     <li >
-                        <a href="<?php echo base_url('index.php/Home/user_logout') ?>">
+                        <a href="<?php echo base_url('index.php/Login/logout') ?>">
                             <i class="material-icons">all_out</i>
                             <p>Sign Out</p>
                         </a>
