@@ -24,6 +24,7 @@
     <!--Theme Styles CSS-->
 	   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css" media="all" />
      <link href="<?php echo base_url(); ?>assets/css/material-kit.css" rel="stylesheet"/>
+     <link href="<?php echo base_url(); ?>assets/css/stars.css" rel="stylesheet"/>
 
 
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -183,12 +184,95 @@
         </div>
 
     </section>
+    <?php $query = $this->db->query("SELECT * FROM `feedback` WHERE `uid`=1 AND`pid`='$projid'"); //userid
+          $feedback=0;
+          $flag=0;
+          if ($query->num_rows()==1) {
+            $flag=1;
+            $row = $query->row();
+            $feedback=$row->feedback;
 
+          }
+
+    ?>
+    </div>
+    <div class="row">
+      <section class="our_feature_area">
+        <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="">
+                    <h4>Give a feedback to this project...</h4>
+                    <div class="stars">
+                      <?php echo form_open('Comment/givefeedback/'.$projid); ?>
+
+                        <input class="star star-5" id="star-5" type="radio" name="star" value="5" <?php if($feedback==5){?>checked<?php } ?>  <?php if($flag==1){?>disabled<?php } ?>/>
+                        <label class="star star-5" for="star-5"></label>
+                        <input class="star star-4" id="star-4" type="radio" name="star" value="4" <?php if($feedback==4){?>checked<?php } ?>  <?php if($flag==1){?>disabled<?php } ?>/>
+                        <label class="star star-4" for="star-4"></label>
+                        <input class="star star-3" id="star-3" type="radio" name="star" value="3" <?php if($feedback==3){?>checked<?php } ?>  <?php if($flag==1){?>disabled<?php } ?>/>
+                        <label class="star star-3" for="star-3"></label>
+                        <input class="star star-2" id="star-2" type="radio" name="star" value="2" <?php if($feedback==2){?>checked<?php } ?>  <?php if($flag==1){?>disabled<?php } ?>/>
+                        <label class="star star-2" for="star-2"></label>
+                        <input class="star star-1" id="star-1" type="radio" name="star" value="1" <?php if($feedback==1){?>checked<?php } ?>  <?php if($flag==1){?>disabled<?php } ?>/>
+                        <label class="star star-1" for="star-1"></label>
+                        <button style="background-color:orange;" type="submit" class="btn btn-primary" <?php if($flag==1){?>disabled<?php } ?>>Give Feedback</button>
+                      </form>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="tittle wow fadeInUp" style="text-align: left;">
+                      <h2 >Leave a comment..</h2>
+                  </div>
+              </div>
+              </div>
+
+              <div class="row">
+                <div class="container">
+                        <?php $query = $this->db->query("SELECT * FROM `comment` WHERE `pid`='$projid'"); ?>
+                        <div class="row" style="margin-top:20px;">
+                          <?php
+                            $num=0;
+                            foreach ($query->result() as $row) { ?>
+                          <div class="col-md-10">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">User id:<?php echo $row->uid ?></div>
+                              <div class="panel-body"><?php echo $row->text ?></div>
+                            </div>
+                          </div>
+
+                        <?php }?>
+
+
+
+                        </div>
+                        <div class="row">
+                          <div class="col-md-8">
+                            <?php echo form_open('Comment/insertcomment/'.$projid); ?>
+                              <div class="form-group">
+                                <label for="comment">Comment:</label>
+                                <textarea class="form-control" rows="5" cols="4" name="comment"></textarea>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                              </div>
+                            </form>
+                          </div>
+
+                        </div>
+                </div>
+              </div>
+
+
+      </section>
     </div>
   </div>
 
 
-</div>
+
 
 
     <!-- Footer Area -->
@@ -237,7 +321,7 @@
                 </div>
 
 
-            
+
                 <div class="col-md-3 col-sm-6 footer_about">
                     <h2>CONTACT US</h2>
                     <address>
