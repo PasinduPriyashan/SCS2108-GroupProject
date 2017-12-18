@@ -194,6 +194,8 @@
 
           }
 
+          $query1 = $this->db->query("SELECT `feedback` FROM `project` WHERE `projid`='$projid'");
+          $row1 = $query1->row();
     ?>
     </div>
     <div class="row">
@@ -219,6 +221,7 @@
                         <button style="background-color:orange;" type="submit" class="btn btn-primary" <?php if($flag==1){?>disabled<?php } ?>>Give Feedback</button>
                       </form>
                     </div>
+                    <p>Average feedback score: <?php echo $row1->feedback ?></p>
                   </div>
 
                 </div>
