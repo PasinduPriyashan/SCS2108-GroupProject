@@ -58,6 +58,12 @@ if (!($log)) {
                         </a>
                     </li>
                     <li>
+                        <a href="<?php echo base_url('index.php/Admin/users') ?>">
+                            <i class="material-icons">person</i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                    <li>
                         <a href="#">
                             <i class="material-icons">message</i>
                             <p>Messages</p>

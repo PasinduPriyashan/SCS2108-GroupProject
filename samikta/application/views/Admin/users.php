@@ -51,13 +51,13 @@ if (!($log)) {
                             <p>User Profile</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li >
                         <a href="<?php echo base_url('index.php/Admin/projects') ?>">
                             <i class="material-icons">group_work</i>
                             <p>Projects</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="<?php echo base_url('index.php/Admin/users') ?>">
                             <i class="material-icons">person</i>
                             <p>Users</p>
@@ -146,48 +146,55 @@ if (!($log)) {
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                      <a href="<?php echo base_url('index.php/Admin/anproject') ?>" class="btn btn-info" role="button">Add new project</a>
+                      <a href="<?php echo base_url('index.php/Admin/addUser'); ?>" class="btn btn-info" role="button">Add new User</a>
                     </div>
                     <?php if (isset($error)) {echo $error;}?>
-                    <?php if (($this->session->set_flashdata('prodel'))) {echo $this->session->set_flashdata('prodel');}?>
+                    <?php if (($this->session->set_flashdata('userdel'))) {echo $this->session->set_flashdata('userdel');}?>
+                    <?php if ($this->session->flashdata('userup')) {
+                                 echo ($this->session->flashdata('userup'));
+
+                               }?>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="card">
                           <div class="card-header" data-background-color="purple">
-                            <h4 class="title">Projects</h4>
+                            <h4 class="title">Users</h4>
                           </div>
                           <div class="card-content">
                             <table class="table">
                               <thead>
                                   <tr>
                                       <th class="text-center">#</th>
-                                      <th>Project Title</th>
-                                      <th>Description</th>
-                                      <th>Image</th>
-                                      <th class="text-right">Date</th>
+                                      <th>User Id</th>
+                                      <th>User Name</th>
+                                      <th>Type</th>
+                                      <th>User Detail Id</th>
                                       <th class="text-right">Actions</th>
+                                      
                                   </tr>
                               </thead>
                               <tbody>
-                                <?php $query = $this->db->get('project');
+                                <?php $query = $this->db->get('user');
 
                                 ?>
                                 <?php  $num=1;
                                 foreach ($query->result() as $row) {
-                                  $id=$row->projid;
+                                  $id=$row->userID;
 
                                 ?>
                                   <tr>
                                       <td class="text-center"><?php echo $num ?></td>
-                                      <td><?php echo $row->projtitle?></td>
-                                      <td><?php echo substr($row->projdes, 0, 60); ?></td>
-                                      <td><img src="<?php echo base_url(); ?>uploads/<?php echo $row->image ?>" style="width:50px;height:50px;"></td>
-                                      <td class="text-right"><?php echo $row->date ?></td>
+                                      <td><?php echo $row->userID ;?></td>
+                                      <td><?php echo $row->userName; ?></td>
+                                      <td><?php echo $row->userType; ?></td>
+                                      <td><?php echo $row->udID; ?></td>
+
+                                      
                                       <td class="td-actions text-right" style="float:right;">
-                                          <a href="<?php echo base_url();?>index.php/Admin/project_edit/<?php echo $id ?>" type="button" rel="tooltip" title="Edit" class="btn btn-success btn-simple btn-xs">
+                                          <a href="<?php echo base_url();?>index.php/Admin/userEdit/<?php echo $id ?>" type="button" rel="tooltip" title="Edit" class="btn btn-success btn-simple btn-xs">
                                               <i class="fa fa-edit"></i>
                                           </a>
-                                          <a href="<?php echo base_url();?>index.php/Admin/project_delete/<?php echo $id ?>" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                          <a href="<?php echo base_url();?>index.php/Admin/userDelete/<?php echo $id ?>" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
                                               <i class="fa fa-times"></i>
                                           </a>
                                       </td>

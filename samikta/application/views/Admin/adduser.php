@@ -69,7 +69,7 @@ if (!($log)) {
                             <p>Messages</p>
                         </a>
                     </li>
-                    <li >
+                    <li>
                         <a href="<?php echo base_url('index.php/Login/logout') ?>">
                             <i class="material-icons">all_out</i>
                             <p>Sign Out</p>
@@ -145,66 +145,62 @@ if (!($log)) {
             </nav>
             <div class="content">
                 <div class="container-fluid">
+
                     <div class="row">
-                      <a href="<?php echo base_url('index.php/Admin/anproject') ?>" class="btn btn-info" role="button">Add new project</a>
-                    </div>
-                    <?php if (isset($error)) {echo $error;}?>
-                    <?php if (($this->session->set_flashdata('prodel'))) {echo $this->session->set_flashdata('prodel');}?>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="card">
-                          <div class="card-header" data-background-color="purple">
-                            <h4 class="title">Projects</h4>
-                          </div>
-                          <div class="card-content">
-                            <table class="table">
-                              <thead>
-                                  <tr>
-                                      <th class="text-center">#</th>
-                                      <th>Project Title</th>
-                                      <th>Description</th>
-                                      <th>Image</th>
-                                      <th class="text-right">Date</th>
-                                      <th class="text-right">Actions</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                <?php $query = $this->db->get('project');
+                      <div class="col-md-8">
+                         <div class="card">
+                             <div class="card-header" data-background-color="purple">
+                                 <h4 class="title">Add New user</h4>
+                 <p class="category"></p>
+                             </div>
+                             <div class="card-content">
+                               <?php if ($this->session->flashdata('useradd')) {
+                                 echo ($this->session->flashdata('useradd'));
 
-                                ?>
-                                <?php  $num=1;
-                                foreach ($query->result() as $row) {
-                                  $id=$row->projid;
+                               }?>
+                               <?php if (isset($error)) {echo $error;}?>
+                               <?php echo form_open_multipart('Admin/addingUser');?>
 
-                                ?>
-                                  <tr>
-                                      <td class="text-center"><?php echo $num ?></td>
-                                      <td><?php echo $row->projtitle?></td>
-                                      <td><?php echo substr($row->projdes, 0, 60); ?></td>
-                                      <td><img src="<?php echo base_url(); ?>uploads/<?php echo $row->image ?>" style="width:50px;height:50px;"></td>
-                                      <td class="text-right"><?php echo $row->date ?></td>
-                                      <td class="td-actions text-right" style="float:right;">
-                                          <a href="<?php echo base_url();?>index.php/Admin/project_edit/<?php echo $id ?>" type="button" rel="tooltip" title="Edit" class="btn btn-success btn-simple btn-xs">
-                                              <i class="fa fa-edit"></i>
-                                          </a>
-                                          <a href="<?php echo base_url();?>index.php/Admin/project_delete/<?php echo $id ?>" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                              <i class="fa fa-times"></i>
-                                          </a>
-                                      </td>
-                                  </tr>
-                                <?php
-                                $num+=1;
-                              }
+                                     <div class="row">
 
-                                ?>
-                              </tbody>
-                          </table>
+                                         <div class="col-md-12">
+                                         <div class="form-group label-floating">
+                                           <label class="control-label" >User Name</label>
+                                           <input  type="text" name="username" class="form-control" value="" required	>
+                                         </div>
 
+                                        </div>
+                                    </div>
+                                    <div class="row">
 
-                          </div>
-                        </div>
+                                         <div class="col-md-12">
+                                         <div class="form-group label-floating">
+                                           <label class="control-label" >Password</label>
+                                           <input  type="password" name="pass" class="form-control" value="" required   >
+                                         </div>
 
-                      </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                         <div class="col-md-12">
+                                         <div class="form-group label-floating">
+                                           <label class="control-label" >confirm Password</label>
+                                           <input  type="password" name="cpass" class="form-control" value="" required   >
+                                         </div>
+
+                                        </div>
+                                    </div>
+
+                                       
+
+                                     <button type="submit" class="btn btn-primary pull-right">Add</button>
+                                     <div class="clearfix"></div>
+                                 </form>
+                             </div>
+                         </div>
+                     </div>
+
 
 
 
