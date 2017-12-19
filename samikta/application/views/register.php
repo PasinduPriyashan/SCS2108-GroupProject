@@ -164,11 +164,11 @@
                     <div class="panel-body" style="padding-top: 0% ; background: #eee;">
                         <div class="login-form" style="margin-top:50px;" >
 
-                            <?php if ($this->session->set_flashdata('msg')) { ?>
+                            <?php if ($this->session->flashdata('msg')) { ?>
 
                                 <div class="alert alert-warning alert-dismissible" role="alert">
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <strong><?php $this->session->set_flashdata('msg'); ?></strong>
+                                    <strong><?php echo $this->session->flashdata('msg'); ?></strong>
                                 </div>
                             <?php } ?>
                             <?php if (validation_errors()) { ?>
