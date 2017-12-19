@@ -39,36 +39,42 @@ if (!($log)) {
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li >
-                        <a href="<?php echo base_url('index.php/Admin/index') ?>">
-                            <i class="material-icons">dashboard</i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="material-icons">person</i>
-                            <p>User Profile</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="<?php echo base_url('index.php/Admin/projects') ?>">
-                            <i class="material-icons">group_work</i>
-                            <p>Projects</p>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="<?php echo base_url('index.php/Admin/message') ?>">
-                            <i class="material-icons">message</i>
-                            <p>Messages</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="<?php echo base_url('index.php/Login/logout') ?>">
-                            <i class="material-icons">all_out</i>
-                            <p>Sign Out</p>
-                        </a>
-                    </li>
+                  <li >
+                      <a href="<?php echo base_url('index.php/Admin/index') ?>">
+                          <i class="material-icons">dashboard</i>
+                          <p>Dashboard</p>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <i class="material-icons">person</i>
+                          <p>User Profile</p>
+                      </a>
+                  </li>
+                  <li >
+                      <a href="<?php echo base_url('index.php/Admin/projects') ?>">
+                          <i class="material-icons">group_work</i>
+                          <p>Projects</p>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="<?php echo base_url('index.php/Admin/users') ?>">
+                          <i class="material-icons">person</i>
+                          <p>Users</p>
+                      </a>
+                  </li>
+                  <li class="active">
+                      <a href="<?php echo base_url('index.php/Admin/message') ?>">
+                          <i class="material-icons">message</i>
+                          <p>Messages</p>
+                      </a>
+                  </li>
+                  <li >
+                      <a href="<?php echo base_url('index.php/Login/logout') ?>">
+                          <i class="material-icons">all_out</i>
+                          <p>Sign Out</p>
+                      </a>
+                  </li>
 
                 </ul>
             </div>
@@ -177,7 +183,7 @@ if (!($log)) {
                                           <a href="<?php echo base_url();?>index.php/Admin/view_message/<?php echo $row->id;  ?>" type="button" rel="tooltip" title="View" class="btn btn-success btn-simple btn-xs">
                                               <i class="fa fa-window-maximize" aria-hidden="true"></i>
                                           </a>
-                                        
+
                                       </td>
                                   </tr>
                                 <?php

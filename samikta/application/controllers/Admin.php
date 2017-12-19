@@ -22,8 +22,26 @@ class Admin extends CI_controller
    public function addUser(){
     $this->load->view('Admin/addUser');
   }
+  public function message(){
+    $this->load->view('Admin/message');
+  }
+  public function view_message($id){
+    $msgid =  $id;
+    $this->load->model('Admin_model');
+    $row = $this->Admin_model->viewmsg($msgid);
+    $data = array('fname' =>$row->fname ,
+              'lname' =>$row->lname ,
+              'email' =>$row->email ,
+              'subject' =>$row->subject  ,
+              'website' =>$row->website ,
+              'message' =>$row->message
+          );
+    //$data = array('' =>  );
+    echo $msgid;
+    $this->load->view('Admin/view_message',$data);
+  }
 
-  
+
 
   public function do_upload(){
                 $config['upload_path']          = './uploads/';
@@ -55,21 +73,21 @@ class Admin extends CI_controller
                 }
         }
         public function addingUser(){
-                
+
             $this->load->model('Admin_model');
             $result= $this->Admin_model->addUser();
 
             if ($result) {
               $this->session->set_flashdata('useradd','Added!');
-              
+
               $this->load->view('Admin/adduser');
 
             }else{
               $this->session->set_flashdata('useradd','Wrong credentials');
-              
+
               $this->load->view('Admin/adduser');
             }
-                
+
         }
 
   public function project_edit($id){
@@ -96,7 +114,7 @@ class Admin extends CI_controller
     $user_data = array(
       'userID' =>$row->userID ,
       'userName' =>$row->userName ,
-      'udID' =>$row->udID 
+      'udID' =>$row->udID
       );
     $this->session->set_userdata($user_data);
 
@@ -135,9 +153,9 @@ class Admin extends CI_controller
                         }
                 }
   }
-  public function updatingUser($userid){             
-                       
-    
+  public function updatingUser($userid){
+
+
       $this->load->model('Admin_model');
       $result= $this->Admin_model->updateUser($userid);
       if ($result) {
@@ -148,7 +166,7 @@ class Admin extends CI_controller
          $this->session->set_flashdata('userup','Cannot Update!');
          $this->load->view('Admin/users');
       }
-                
+
   }
 
   public function project_delete($id){
