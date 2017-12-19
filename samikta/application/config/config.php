@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://ec2-52-192-198-40.ap-northeast-1.compute.amazonaws.com/samiktaMe/';
+$config['base_url'] = 'http://ec2-52-192-198-40.ap-northeast-1.compute.amazonaws.com/SCS2108-GroupProject/samikta/';
 
 /*
 |--------------------------------------------------------------------------
