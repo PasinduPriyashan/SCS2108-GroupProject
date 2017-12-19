@@ -34,7 +34,7 @@ if (!($log)) {
     -->
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
-                  <?php echo $this->session->userdata('fname'); ?>
+                  <?php echo $this->session->userdata('userName'); ?>
                 </a>
             </div>
             <div class="sidebar-wrapper">
