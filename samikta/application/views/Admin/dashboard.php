@@ -34,7 +34,7 @@ if (!($log)) {
     -->
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
-                  <?php echo $this->session->userdata('fname'); ?>
+                  <?php echo $this->session->userdata('userName'); ?>
                 </a>
             </div>
             <div class="sidebar-wrapper">
@@ -140,6 +140,8 @@ if (!($log)) {
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
+
+                    <iframe src="https://calendar.google.com/calendar/embed?src=en.lk%23holiday%40group.v.calendar.google.com&ctz=Asia%2FColombo" style="border: 0" width="1200" height="600" frameborder="0" scrolling="no"></iframe>
 
                     </div>
                 </div>

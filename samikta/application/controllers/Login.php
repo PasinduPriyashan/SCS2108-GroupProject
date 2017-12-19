@@ -26,10 +26,17 @@ class Login extends CI_controller
 				'userType'=>$result->userType,
 				'loggedIn'=>TRUE
 			);
-			$this->session->set_userdata($userData);
-			$this->session->set_flashdata('welcome','welcome back');
-			redirect('Admin');
 
+			if($result->userType == 'admin'){
+				$this->session->set_userdata($userData);
+				$this->session->set_flashdata('welcome','welcome back Admin');
+				redirect('Admin');
+			}elseif ($result->userType == 'customer') {
+				$this->session->set_userdata($userData);
+				$this->session->set_flashdata('welcome','welcome back customer');
+				redirect('Home');
+			}
+			
 
 
 		}else{
