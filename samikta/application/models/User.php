@@ -64,7 +64,9 @@ class User extends CI_Model
 
   }
 
-
+  function contactUs($data){
+    $this->db->insert('contactus',$data);
+  }
 
 
 }
