@@ -10,12 +10,12 @@ class User extends CI_Model
       $data = array(
 
         'fname'   => $this->input->post('fname',TRUE),
-        'mname'   => $this->input->post('fname',TRUE),
-        'lname'   => $this->input->post('fname',TRUE),
-        'nic'     => $this->input->post('fname',TRUE),
-        'email'   => $this->input->post('fname',TRUE),
-        'dob'     => $this->input->post('fname',TRUE),
-        'contact' => $this->input->post('fname',TRUE)
+        'mname'   => $this->input->post('mname',TRUE),
+        'lname'   => $this->input->post('lname',TRUE),
+        'nic'     => $this->input->post('nic',TRUE),
+        'email'   => $this->input->post('email',TRUE),
+        'dob'     => $this->input->post('dob',TRUE),
+        'contact' => $this->input->post('contact',TRUE)
       );
 
       $result =  $this->db->insert('userdetail',$data);
@@ -33,12 +33,12 @@ class User extends CI_Model
 
 
   function createLogin($id){
-    
+     
       $data = array(
 
-        'userName'   => $this->input->post('fname',TRUE),
-        'password'   => $this->input->post('fname',TRUE),
-        'userType'   => $this->input->post('fname',TRUE),
+        'userName'   => $this->input->post('username',TRUE),
+        'password'   => $this->input->post('password',TRUE),
+        'userType'   => 'customer',
         'udID'       => $id
       );
 
