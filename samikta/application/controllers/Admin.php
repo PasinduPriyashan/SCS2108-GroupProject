@@ -20,7 +20,7 @@ class Admin extends CI_controller
     $this->load->view('Admin/anproject');
   }
    public function addUser(){
-    $this->load->view('Admin/addUser');
+    $this->load->view('Admin/adduser');
   }
   public function message(){
     $this->load->view('Admin/message');
