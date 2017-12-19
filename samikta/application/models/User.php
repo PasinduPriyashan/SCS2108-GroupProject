@@ -37,7 +37,7 @@ class User extends CI_Model
       $data = array(
 
         'userName'   => $this->input->post('username',TRUE),
-        'password'   => $this->input->post('password',TRUE),
+        'password'   => md5($this->input->post('password',TRUE)),
         'userType'   => 'customer',
         'udID'       => $id
       );
@@ -50,6 +50,8 @@ class User extends CI_Model
     
       $uname = $this->input->post('username');
       $pass  = $this->input->post('password');
+
+      $pass = md5($pass);
 
       $this->db->where('username',$uname);
       $this->db->where('password',$pass);

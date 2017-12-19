@@ -92,7 +92,7 @@ class Admin_model extends CI_model
 
    if($pass==$cpass){
       $userdata = array(  'userName' =>$uname ,
-                             'password' =>$pass ,
+                             'password' =>md5($pass) ,
                              
 
                            );
