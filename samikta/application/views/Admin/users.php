@@ -64,7 +64,7 @@ if (!($log)) {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?php echo base_url('index.php/Admin/message') ?>">
                             <i class="material-icons">message</i>
                             <p>Messages</p>
                         </a>
@@ -170,7 +170,7 @@ if (!($log)) {
                                       <th>Type</th>
                                       <th>User Detail Id</th>
                                       <th class="text-right">Actions</th>
-                                      
+
                                   </tr>
                               </thead>
                               <tbody>
@@ -189,7 +189,7 @@ if (!($log)) {
                                       <td><?php echo $row->userType; ?></td>
                                       <td><?php echo $row->udID; ?></td>
 
-                                      
+
                                       <td class="td-actions text-right" style="float:right;">
                                           <a href="<?php echo base_url();?>index.php/Admin/userEdit/<?php echo $id ?>" type="button" rel="tooltip" title="Edit" class="btn btn-success btn-simple btn-xs">
                                               <i class="fa fa-edit"></i>

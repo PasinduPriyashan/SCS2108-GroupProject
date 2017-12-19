@@ -64,7 +64,7 @@ if (!($log)) {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?php echo base_url('index.php/Admin/message') ?>">
                             <i class="material-icons">message</i>
                             <p>Messages</p>
                         </a>
