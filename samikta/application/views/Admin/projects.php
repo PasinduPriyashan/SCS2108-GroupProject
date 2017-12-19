@@ -150,7 +150,7 @@ if (!($log)) {
                           <div class="card-header" data-background-color="purple">
                             <h4 class="title">Projects</h4>
                           </div>
-                          <div class="class="card-content"">
+                          <div class="card-content">
                             <table class="table">
                               <thead>
                                   <tr>
