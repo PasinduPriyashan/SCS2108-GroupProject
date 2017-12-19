@@ -120,6 +120,12 @@ class Admin_model extends CI_model
     $this->db->delete('user');
     return ($this->db->affected_rows() != 1) ? false : true;
   }
+    public function viewmsg($id){
+   $mid=$id;
+   $query = $this->db->query("SELECT * FROM `message` WHERE `id`='$mid'");
+   $row = $query->row();
+   return $row;
+ }
 }
 
  ?>
